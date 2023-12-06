@@ -7,6 +7,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import Gallery from "./pages/Gallery/Gallery";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import BlogPage from "./pages/BlogPage/BlogPage";
+import HistoryPage from "./pages/HistoryPage/HistoryPage";
 // import BlogDetails from "./pages/BlogPage/BlogDetails";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/contactus" element={<ContactPage />} />
+                    <Route path="/history" element={<HistoryPage />} />
                     {/* <Route path="/blog/:id" element={<BlogDetails />} /> */}
                 </Routes>
             </Layout>

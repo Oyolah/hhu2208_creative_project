@@ -60,6 +60,14 @@ const Layout = ({ children }) => {
                         </li>
                         <li className="mr-6">
                             <Link
+                                to="/history"
+                                className="text-white hover:text-gray-300"
+                            >
+                                History
+                            </Link>
+                        </li>
+                        <li className="mr-6">
+                            <Link
                                 to="/blog"
                                 className="text-white hover:text-gray-300"
                             >
@@ -123,6 +131,15 @@ const Layout = ({ children }) => {
                                         onClick={toggleMobileMenu}
                                     >
                                         About
+                                    </Link>
+                                </li>
+                                <li className="my-2">
+                                    <Link
+                                        to="/history"
+                                        className="text-white hover:text-gray-300"
+                                        onClick={toggleMobileMenu}
+                                    >
+                                        History
                                     </Link>
                                 </li>
                                 <li className="my-2">

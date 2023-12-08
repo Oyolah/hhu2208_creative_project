@@ -89,9 +89,9 @@ const BlogForm = ({ addBlog }) => {
             </div>
             <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="button-color text-white px-4 py-2 rounded"
             >
-                Add Blog
+                Save Your Story
             </button>
         </form>
     );

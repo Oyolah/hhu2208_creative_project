@@ -41,10 +41,10 @@ const BlogPage = () => {
 
             {/* Toggle button for Add Blog Form */}
             <button
-                className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
+                className="button-color text-white px-4 py-2 rounded mb-4"
                 onClick={() => setShowForm(!showForm)}
             >
-                {showForm ? "Close Form" : "Add Blog"}
+                {showForm ? "Close Form" : "Add Your Story"}
             </button>
 
             {/* Blog Form */}

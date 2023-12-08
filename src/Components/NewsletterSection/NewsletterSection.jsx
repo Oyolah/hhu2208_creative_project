@@ -13,7 +13,7 @@ const NewsletterSection = () => {
     return (
         <section className="bg-gray-200 py-12 text-center">
             <div className="text-3xl text-gray-700 mb-4">
-                <FaEnvelope className="inline-block text-blue-500 text-5xl mr-2" />
+                <FaEnvelope className="inline-block green-text-color text-5xl mr-2" />
                 Get the latest Street Child news in your inbox
             </div>
             <p className="text-gray-600 mb-8">
@@ -30,7 +30,7 @@ const NewsletterSection = () => {
                 />
                 <button
                     onClick={handleSubscribe}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-r"
+                    className="button-color text-white px-4 py-2 rounded-r"
                 >
                     Subscribe
                 </button>

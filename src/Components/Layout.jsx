@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <header className="bg-gray-800 p-4 text-white flex justify-between items-center">
+            <header className="green-color p-4 text-white flex justify-between items-center">
                 <Link to="/" className="text-2xl font-bold">
                     Blow Your Mind
                 </Link>
@@ -108,7 +108,7 @@ const Layout = ({ children }) => {
                 >
                     {(state) => (
                         <div
-                            className={`lg:hidden fixed top-0 right-0 w-28 h-full bg-gray-800`}
+                            className={`lg:hidden fixed top-0 right-0 w-28 h-full bg-green-900`}
                             style={{
                                 ...defaultStyle,
                                 ...transitionStyles[state],
@@ -186,7 +186,7 @@ const Layout = ({ children }) => {
 
             <main className="flex-grow pl-2 pr-2">{children}</main>
 
-            <footer className="bg-gray-800 p-4 text-white">
+            <footer className="green-color p-4 text-white">
                 <Footer />
                 {/* &copy; 2023 Your App Name. All rights reserved. */}
             </footer>

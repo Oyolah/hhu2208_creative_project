@@ -40,12 +40,6 @@ const Blog = ({ blog }) => {
                             )}
                         </p>
                         <div class="flex items-center justify-between mt-2 mx-6">
-                            <Link
-                                to={`/blog/${blog.id}`}
-                                className="text-blue-500 hover:underline"
-                            >
-                                Read More
-                            </Link>
                             <button
                                 class="text-blue-500 text-xs -ml-3 "
                                 onClick={openModal}
@@ -73,7 +67,7 @@ const Blog = ({ blog }) => {
                             <div class="user-logo">
                                 <img
                                     class="w-12 h-12 object-cover rounded-full mx-4  shadow"
-                                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
+                                    src={blog.image}
                                     alt="avatar"
                                 />
                             </div>

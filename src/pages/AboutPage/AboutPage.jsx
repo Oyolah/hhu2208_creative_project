@@ -21,9 +21,9 @@ const AboutUsPage = () => {
                         Our Mission and Values
                     </h2>
                     <p className="text-gray-600 mb-6">
-                        At [Your Organization Name], our mission is to build a
-                        world where every individual is free from the shackles
-                        of exploitation. We are driven by the core values of
+                        At Blow your Mind, our mission is to build a world where
+                        every individual is free from the shackles of
+                        exploitation. We are driven by the core values of
                         justice, equality, and compassion. Through our tireless
                         efforts, we strive to create lasting change and empower
                         those affected by exploitation.

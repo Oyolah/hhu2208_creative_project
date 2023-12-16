@@ -2,6 +2,13 @@
 import React, { useState } from "react";
 
 const BlogForm = ({ addBlog }) => {
+    const [formErrors, setFormErrors] = useState({
+        image: "",
+        date: "",
+        author: "",
+        title: "",
+        description: "",
+    });
     const [newBlog, setNewBlog] = useState({
         image: "",
         date: "",
@@ -20,14 +27,33 @@ const BlogForm = ({ addBlog }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addBlog(newBlog);
-        setNewBlog({
-            image: "",
-            date: "",
-            author: "",
-            title: "",
-            description: "",
+
+        // Validate the form fields
+        let isValid = true;
+        const newErrors = { ...formErrors };
+
+        Object.keys(newBlog).forEach((field) => {
+            if (newBlog[field].trim() === "") {
+                newErrors[field] = `Please fill in the ${field} field.`;
+                isValid = false;
+            } else {
+                newErrors[field] = "";
+            }
         });
+
+        setFormErrors(newErrors);
+
+        // If the form is valid, proceed with adding the blog
+        if (isValid) {
+            addBlog(newBlog);
+            setNewBlog({
+                image: "",
+                date: "",
+                author: "",
+                title: "",
+                description: "",
+            });
+        }
     };
 
     return (
@@ -44,17 +70,19 @@ const BlogForm = ({ addBlog }) => {
                     className="w-full p-2 border border-gray-300 rounded"
                 />
             </div>
+            {/* Update the date field to datetime-local */}
             <div className="mb-2">
-                <label htmlFor="date">Date:</label>
+                <label htmlFor="datetime">Date and Time:</label>
                 <input
-                    type="text"
-                    id="date"
-                    name="date"
-                    value={newBlog.date}
+                    type="datetime-local" // Change the input type
+                    id="datetime"
+                    name="datetime"
+                    value={newBlog.datetime}
                     onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded"
                 />
             </div>
+
             <div className="mb-2">
                 <label htmlFor="author">Author:</label>
                 <input
@@ -87,6 +115,15 @@ const BlogForm = ({ addBlog }) => {
                     className="w-full p-2 border border-gray-300 rounded"
                 ></textarea>
             </div>
+            {/* Display error messages */}
+            {Object.values(formErrors).map(
+                (error, index) =>
+                    error && (
+                        <p key={index} className="text-red-500">
+                            {error}
+                        </p>
+                    )
+            )}
             <button
                 type="submit"
                 className="button-color text-white px-4 py-2 rounded"
